@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private float _verticalInput;
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Garante que a variável _horizontalInput receba e referencie os valores de "Horizontal" no Input Manager
         _horizontalInput = Input.GetAxis("Horizontal");

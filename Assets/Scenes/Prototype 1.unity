@@ -694,7 +694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdfbc9bdf7340547a3406a1924337e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowPlayer
-  _player: {fileID: 959110678}
+  _playerTransform: {fileID: 959110688}
+  _thirdPersonOffset: {x: 0, y: 6, z: -9}
+  _firstPersonOffset: {x: 0, y: 1.8, z: 1.45}
 --- !u!1 &625031987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 515175755739571116, guid: 46f9eda5f45584fb3ad05abcd7af6df2, type: 3}
@@ -915,6 +917,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &959110688 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 417704, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
+  m_PrefabInstance: {fileID: 676160912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974359749
 PrefabInstance:
   m_ObjectHideFlags: 0
