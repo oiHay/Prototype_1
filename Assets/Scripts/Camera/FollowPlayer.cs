@@ -4,6 +4,8 @@ public class FollowPlayer : MonoBehaviour
 {
     // Cria referência para o transform player
     [SerializeField] private Transform _playerTransform;
+    // Cria referência qual botão será clicado para mudar a visão
+    [SerializeField] private KeyCode _swithKey;
 
     // Cria variáveis de posição para o offset
     [Header("Offsets")]
@@ -22,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
     private void HandlingCameraView()
     {
         // GetKeyDown dispara apenas uma vez por pressionamento, sem flickering
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(_swithKey))
         {
             _isFirstPersonView = !_isFirstPersonView;
         }

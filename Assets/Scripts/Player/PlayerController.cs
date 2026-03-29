@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Reference")] [SerializeField] private string _inputID;
+    
     [Header("Movement Parameters")]
     [SerializeField] private float _speed;
     [SerializeField] private float _turnSpeed;
@@ -14,10 +16,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Garante que a variável _horizontalInput receba e referencie os valores de "Horizontal" no Input Manager
-        _horizontalInput = Input.GetAxis("Horizontal");
+        _horizontalInput = Input.GetAxis("Horizontal" + _inputID);
 
         // Garante que a variável _verticalInput receba e referencie os valores de "Vertical" no Input Manager
-        _verticalInput = Input.GetAxis("Vertical");
+        _verticalInput = Input.GetAxis("Vertical" + _inputID);
         
         // Move o carro para frente baseado em inputs verticais
         transform.Translate(Vector3.forward * (Time.deltaTime * _speed * _verticalInput));  
